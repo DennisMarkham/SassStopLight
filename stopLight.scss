@@ -1,0 +1,62 @@
+@mixin normal($color)
+{
+background-color: hsl($color, 50%, 50%)	
+}
+@mixin bright($color)
+{
+background-color: hsl($color, 100%, 70%)
+}
+
+$red: 0;
+$yellow: 50;
+$green: 100;
+
+#red
+	{
+		@include normal($red);
+		animation-name: redLight;
+		animation-duration: 20s;
+		
+	}
+	#yellow
+	{
+		background-color: hsl($yellow, 50%, 50%);
+		animation-name: yellowLight;
+		animation-duration: 20s;
+	}
+	#green
+	{
+		background-color: hsl($green, 50%, 50%);
+		animation-name: greenLight;
+		animation-duration: 20s;
+
+	}
+
+	#green, #yellow, #red
+	{
+		width: 50px;
+		height: 50px;
+		border-radius: 25px;
+		margin-top: 20px;
+	}
+
+@keyframes redLight {
+  20%  {@include normal($red)}
+  22%  {@include bright($red)}
+  54% {@include bright($red)}
+  56% {@include normal($red)}
+}
+
+@keyframes yellowLight {
+	0% {@include normal($yellow)}
+	2% {@include bright($yellow)}
+	19% {@include bright($yellow)}
+	21% {@include normal($yellow)}
+}
+
+@keyframes greenLight {
+	54% {@include normal($green)}
+	56% {@include bright($green)}
+	98% {@include bright($green)}
+	100% {@include normal($green)}
+}

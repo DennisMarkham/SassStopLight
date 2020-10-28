@@ -1,0 +1,69 @@
+#red {
+  background-color: #bf4040;
+  animation-name: redLight;
+  animation-duration: 20s;
+}
+
+#yellow {
+  background-color: #bfaa40;
+  animation-name: yellowLight;
+  animation-duration: 20s;
+}
+
+#green {
+  background-color: #6abf40;
+  animation-name: greenLight;
+  animation-duration: 20s;
+}
+
+#green, #yellow, #red {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  margin-top: 20px;
+}
+
+@keyframes redLight {
+  20% {
+    background-color: #bf4040;
+  }
+  22% {
+    background-color: #ff6666;
+  }
+  54% {
+    background-color: #ff6666;
+  }
+  56% {
+    background-color: #bf4040;
+  }
+}
+@keyframes yellowLight {
+  0% {
+    background-color: #bfaa40;
+  }
+  2% {
+    background-color: #ffe666;
+  }
+  19% {
+    background-color: #ffe666;
+  }
+  21% {
+    background-color: #bfaa40;
+  }
+}
+@keyframes greenLight {
+  54% {
+    background-color: #6abf40;
+  }
+  56% {
+    background-color: #99ff66;
+  }
+  98% {
+    background-color: #99ff66;
+  }
+  100% {
+    background-color: #6abf40;
+  }
+}
+
+/*# sourceMappingURL=stopLight.css.map */
