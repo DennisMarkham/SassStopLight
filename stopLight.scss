@@ -10,25 +10,34 @@ background-color: hsl($color, 100%, 70%)
 $red: 0;
 $yellow: 50;
 $green: 100;
+$awning: 4px solid black;
+
+#lightBox
+{
+	background-color: yellow;
+	display: inline-block;
+}
 
 #red
 	{
 		@include normal($red);
 		animation-name: redLight;
 		animation-duration: 20s;
-		
+		border-top: $awning;
 	}
 	#yellow
 	{
 		background-color: hsl($yellow, 50%, 50%);
 		animation-name: yellowLight;
 		animation-duration: 20s;
+		border-top: $awning;
 	}
 	#green
 	{
 		background-color: hsl($green, 50%, 50%);
 		animation-name: greenLight;
 		animation-duration: 20s;
+		border-top: $awning;
 
 	}
 
@@ -37,6 +46,7 @@ $green: 100;
 		width: 50px;
 		height: 50px;
 		border-radius: 25px;
+		margin: 10px;
 		margin-top: 20px;
 	}
 
