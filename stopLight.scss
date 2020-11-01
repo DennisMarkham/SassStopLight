@@ -1,20 +1,22 @@
 @mixin normal($color)
 {
-background-color: hsl($color, 50%, 50%)	
+background-image: radial-gradient(hsl($color, 50%, 50%), hsl($color, 50%, 50%));	
 }
 @mixin bright($color)
 {
-background-color: hsl($color, 100%, 70%)
+background-image: radial-gradient(hsl($color, 100%, 70%), hsl($color, 55%, 60%));
 }
 
+//okay, so the radial gradient trick works, but now the times are all screwy. WTF.  Or wait, no, what's happening is they don't revert back from 'background-image'
 $red: 0;
 $yellow: 50;
 $green: 100;
 $awning: 4px solid black;
+$time: 20s;
 
 #lightBox
 {
-	background-color: yellow;
+	background-image: radial-gradient(yellow, yellow);
 	display: inline-block;
 }
 
@@ -22,21 +24,21 @@ $awning: 4px solid black;
 	{
 		@include normal($red);
 		animation-name: redLight;
-		animation-duration: 20s;
+		animation-duration: $time;
 		border-top: $awning;
 	}
 	#yellow
 	{
-		background-color: hsl($yellow, 50%, 50%);
+		@include normal($yellow);
 		animation-name: yellowLight;
-		animation-duration: 20s;
+		animation-duration: $time;
 		border-top: $awning;
 	}
 	#green
 	{
-		background-color: hsl($green, 50%, 50%);
+		@include normal($green);
 		animation-name: greenLight;
-		animation-duration: 20s;
+		animation-duration: $time;
 		border-top: $awning;
 
 	}

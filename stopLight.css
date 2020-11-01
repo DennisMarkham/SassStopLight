@@ -1,24 +1,24 @@
 #lightBox {
-  background-color: yellow;
+  background-image: radial-gradient(yellow, yellow);
   display: inline-block;
 }
 
 #red {
-  background-color: #bf4040;
+  background-image: radial-gradient(#bf4040, #bf4040);
   animation-name: redLight;
   animation-duration: 20s;
   border-top: 4px solid black;
 }
 
 #yellow {
-  background-color: #bfaa40;
+  background-image: radial-gradient(#bfaa40, #bfaa40);
   animation-name: yellowLight;
   animation-duration: 20s;
   border-top: 4px solid black;
 }
 
 #green {
-  background-color: #6abf40;
+  background-image: radial-gradient(#6abf40, #6abf40);
   animation-name: greenLight;
   animation-duration: 20s;
   border-top: 4px solid black;
@@ -34,44 +34,44 @@
 
 @keyframes redLight {
   20% {
-    background-color: #bf4040;
+    background-image: radial-gradient(#bf4040, #bf4040);
   }
   22% {
-    background-color: #ff6666;
+    background-image: radial-gradient(#ff6666, #d16161);
   }
   54% {
-    background-color: #ff6666;
+    background-image: radial-gradient(#ff6666, #d16161);
   }
   56% {
-    background-color: #bf4040;
+    background-image: radial-gradient(#bf4040, #bf4040);
   }
 }
 @keyframes yellowLight {
   0% {
-    background-color: #bfaa40;
+    background-image: radial-gradient(#bfaa40, #bfaa40);
   }
   2% {
-    background-color: #ffe666;
+    background-image: radial-gradient(#ffe666, #d1be61);
   }
   19% {
-    background-color: #ffe666;
+    background-image: radial-gradient(#ffe666, #d1be61);
   }
   21% {
-    background-color: #bfaa40;
+    background-image: radial-gradient(#bfaa40, #bfaa40);
   }
 }
 @keyframes greenLight {
   54% {
-    background-color: #6abf40;
+    background-image: radial-gradient(#6abf40, #6abf40);
   }
   56% {
-    background-color: #99ff66;
+    background-image: radial-gradient(#99ff66, #86d161);
   }
   98% {
-    background-color: #99ff66;
+    background-image: radial-gradient(#99ff66, #86d161);
   }
   100% {
-    background-color: #6abf40;
+    background-image: radial-gradient(#6abf40, #6abf40);
   }
 }
 
